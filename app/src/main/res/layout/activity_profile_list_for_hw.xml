@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:orientation="vertical"
+   android:paddingBottom="@dimen/activity_vertical_margin"
+   android:paddingLeft="@dimen/activity_horizontal_margin"
+   android:paddingRight="@dimen/activity_horizontal_margin"
+   android:paddingTop="@dimen/activity_vertical_margin"
+   tools:context="com.hackathon.appsoul.mombabycare.activity.ProfileListForHwActivity">
+
+   <TextView
+      android:id="@+id/locationTv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="right"
+      android:text="@string/location"/>
+
+   <ProgressBar
+      android:id="@+id/pbbarProfile"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"/>
+
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <EditText
+         android:id="@+id/searchEt"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="2"/>
+
+      <Button
+         android:id="@+id/searchBtn"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:text="@string/search"
+         android:textAllCaps="false"/>
+
+   </LinearLayout>
+
+
+   <ListView
+      android:id="@+id/lstMomProfile"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:animationCache="false"
+      android:divider="#808080"
+      android:dividerHeight="1dp"
+      android:padding="5dp"
+      android:smoothScrollbar="true">
+   </ListView>
+</LinearLayout>

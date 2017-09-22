@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:id="@+id/colorFlow"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical"
+   android:background="#787878"
+   android:focusableInTouchMode="true"
+   tools:context="com.hackathon.appsoul.mombabycare.activity.CreateChildProfileActivity">
+   
+   <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/white_10_transparent"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+   
+   <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      
+      <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_margin="16dp">
+         
+         <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            
+            <View
+               android:layout_width="16dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"/>
+            
+            <RadioButton
+               android:id="@+id/babyMaleRBtn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:textSize="16sp"
+               android:text="Male"
+               android:textColor="@color/white_70_transparent"/>
+            
+            <View
+               android:layout_width="16dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1.2"/>
+            
+            <RadioButton
+               android:id="@+id/babyFemaleRBtn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:textSize="16sp"
+               android:text="Female"
+               android:textColor="@color/white_70_transparent"/>
+            
+            <View
+               android:layout_width="16dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"/>
+         </RadioGroup>
+         
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_field"
+            android:orientation="vertical">
+            
+            <android.support.design.widget.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:gravity="center_vertical"
+               android:textColorHint="@color/white_70_transparent">
+               
+               <EditText
+                  android:id="@+id/babyNameET"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@null"
+                  android:textSize="16sp"
+                  android:hint="Baby Name"
+                  android:inputType="textPersonName"
+                  android:paddingLeft="16.0dip"
+                  android:paddingRight="16.0dip"
+                  android:textColor="@color/white_70_transparent"/>
+            
+            </android.support.design.widget.TextInputLayout>
+            
+            <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp">
+               
+               <View
+                  android:id="@+id/underline_view_name"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/color8"
+                  android:visibility="invisible"/>
+               
+               <View
+                  android:id="@+id/second_underline_view_name"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/red_5"
+                  android:visibility="invisible"/>
+            
+            </FrameLayout>
+         </LinearLayout>
+         
+         <TextView
+            android:id="@+id/nameErrorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+         
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_field"
+            android:orientation="vertical">
+            
+            <android.support.design.widget.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:gravity="center_vertical"
+               android:textColorHint="@color/white_70_transparent">
+               
+               <EditText
+                  android:id="@+id/babyDateOfBirthET"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@null"
+                  android:textSize="16sp"
+                  android:hint="Date of Birth"
+                  android:onClick="datePicker"
+                  android:paddingLeft="16dp"
+                  android:paddingRight="16dp"
+                  android:editable="false"
+                  android:cursorVisible="false"
+                  android:gravity="center_vertical"
+                  android:textColor="@color/white_70_transparent"/>
+            
+            </android.support.design.widget.TextInputLayout>
+            
+            <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp">
+               
+               <View
+                  android:id="@+id/underline_view_dob"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/color8"
+                  android:visibility="invisible"/>
+               
+               <View
+                  android:id="@+id/second_underline_view_dob"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/red_5"
+                  android:visibility="invisible"/>
+            
+            </FrameLayout>
+         </LinearLayout>
+         
+         <TextView
+            android:id="@+id/dateOfBirthErrorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+         
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80.0dip"
+            android:background="@drawable/login_input_field"
+            android:orientation="vertical">
+            
+            <TextView
+               android:id="@+id/bloodGroupTV"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:paddingLeft="16dp"
+               android:paddingRight="16dp"
+               android:gravity="center_vertical"
+               android:text="Blood Group"
+               android:textSize="16sp"
+               android:textAppearance="?android:attr/textAppearanceMedium"
+               android:textColor="@color/white_70_transparent"/>
+            
+            <Spinner
+               android:id="@+id/babyBloodGroupSpnr"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginLeft="16dp"
+               android:layout_marginRight="16dp"/>
+         
+         </LinearLayout>
+         
+         <TextView
+            android:id="@+id/bloodGroupErrorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+         
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_field"
+            android:orientation="vertical">
+            
+            <android.support.design.widget.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:gravity="center_vertical"
+               android:textColorHint="@color/white_70_transparent">
+               
+               <EditText
+                  android:id="@+id/babyWeightET"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@null"
+                  android:textSize="16sp"
+                  android:hint="Weight"
+                  android:inputType="numberDecimal"
+                  android:paddingLeft="16dp"
+                  android:paddingRight="16dp"
+                  android:textColor="@color/white_70_transparent"/>
+            
+            </android.support.design.widget.TextInputLayout>
+            
+            <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp">
+               
+               <View
+                  android:id="@+id/underline_view_weight"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/color8"
+                  android:visibility="invisible"/>
+               
+               <View
+                  android:id="@+id/second_underline_view_weight"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/red_5"
+                  android:visibility="invisible"/>
+            
+            </FrameLayout>
+         </LinearLayout>
+         
+         <TextView
+            android:id="@+id/weightErrorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+         
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_field"
+            android:orientation="vertical">
+            
+            <android.support.design.widget.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:gravity="center_vertical"
+               android:textColorHint="@color/white_70_transparent">
+               
+               <EditText
+                  android:id="@+id/babyHeightET"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@null"
+                  android:textSize="16sp"
+                  android:hint="Height"
+                  android:inputType="numberDecimal"
+                  android:paddingLeft="16dp"
+                  android:paddingRight="16dp"
+                  android:textColor="@color/white_70_transparent"/>
+            
+            </android.support.design.widget.TextInputLayout>
+            
+            <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp">
+               
+               <View
+                  android:id="@+id/underline_view_height"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/color8"
+                  android:visibility="invisible"/>
+               
+               <View
+                  android:id="@+id/second_underline_view_height"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/red_5"
+                  android:visibility="invisible"/>
+            
+            </FrameLayout>
+         </LinearLayout>
+         
+         <TextView
+            android:id="@+id/heightErrorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+         
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_field"
+            android:orientation="vertical">
+            
+            <android.support.design.widget.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:gravity="center_vertical"
+               android:textColorHint="@color/white_70_transparent">
+               
+               <EditText
+                  android:id="@+id/babyBirthDefectET"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@null"
+                  android:textSize="16sp"
+                  android:hint="Birth Defect"
+                  android:inputType="textAutoCorrect"
+                  android:paddingLeft="16dp"
+                  android:paddingRight="16dp"
+                  android:textColor="@color/white_70_transparent"/>
+            
+            </android.support.design.widget.TextInputLayout>
+            
+            <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp">
+               
+               <View
+                  android:id="@+id/underline_view_birth_defect"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/color8"
+                  android:visibility="invisible"/>
+               
+               <View
+                  android:id="@+id/second_underline_view_birth_defect"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/red_5"
+                  android:visibility="invisible"/>
+            
+            </FrameLayout>
+         </LinearLayout>
+         
+         <TextView
+            android:id="@+id/birthDefectErrorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+         
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_field"
+            android:orientation="vertical">
+            
+            <android.support.design.widget.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:gravity="center_vertical"
+               android:textColorHint="@color/white_70_transparent">
+               
+               <EditText
+                  android:id="@+id/babyDeliveryStatusET"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@null"
+                  android:textSize="16sp"
+                  android:hint="Delivery Status"
+                  android:inputType="textAutoCorrect"
+                  android:paddingLeft="16dp"
+                  android:paddingRight="16dp"
+                  android:textColor="@color/white_70_transparent"/>
+            
+            </android.support.design.widget.TextInputLayout>
+            
+            <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp">
+               
+               <View
+                  android:id="@+id/underline_view_delivery_status"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/color8"
+                  android:visibility="invisible"/>
+               
+               <View
+                  android:id="@+id/second_underline_view_delivery_status"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/red_5"
+                  android:visibility="invisible"/>
+            
+            </FrameLayout>
+         </LinearLayout>
+         
+         <TextView
+            android:id="@+id/deliveryErrorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+         
+         <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            
+            <ProgressBar
+               android:id="@+id/pbbar"
+               android:layout_width="32.0dip"
+               android:layout_height="32.0dip"
+               android:layout_gravity="center"
+               android:indeterminate="true"/>
+            
+            <TextView
+               android:id="@+id/saveButton"
+               android:layout_width="fill_parent"
+               android:layout_height="48.0dip"
+               android:background="@drawable/button_border"
+               android:gravity="center"
+               android:text="Save"
+               android:textColor="@color/white_80_transparent"
+               android:textSize="16sp"
+               android:textStyle="bold"/>
+         </FrameLayout>
+      </LinearLayout>
+   </ScrollView>
+</LinearLayout>

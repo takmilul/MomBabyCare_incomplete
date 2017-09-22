@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Layout of a single DIARY_ENTRY Event in the timeline list
+The top level tag attribute is required in the Timeline list adapter
+-->
+<TableLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:background="@drawable/white_rounded_bg_timeline"
+   android:orientation="horizontal"
+   android:paddingRight="32dp"
+   android:shrinkColumns="0"
+   android:stretchColumns="1"
+   android:tag="USER"
+   >
+   <!-- Row with icon, date, and edit and delete buttons -->
+   <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/timeline"
+      android:gravity="center_vertical"
+      android:padding="0dip">
+      
+      <!-- Diary icon on top of timeline -->
+      <ImageView
+         android:id="@+id/list_item_entry_timeline"
+         style="@style/timeline_bubble_icon_style"
+         android:contentDescription="@string/icon"
+         android:src="@drawable/ic_diary"
+         />
+      
+      <!-- Date -->
+      <TextView
+         android:id="@+id/list_item_entry_date"
+         style="@style/timeline_diarydate_style"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         />
+   
+   
+   </TableRow>
+   <!--  The diary notes -->
+   <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/timeline"
+      android:gravity="center_vertical"
+      android:padding="0dip">
+      
+      <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="0dp"
+         android:background="@android:color/transparent"
+         />
+      <!-- Notes -->
+      <TextView
+         android:id="@+id/list_item_entry_notes"
+         style="@style/timeline_diarynotes_style"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_span="3"
+         />
+   </TableRow>
+   <!-- The photo -->
+   <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/timeline"
+      android:gravity="center_vertical"
+      android:padding="0dip">
+      
+      <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="@android:color/transparent"
+         />
+      <!-- Photo -->
+      <ImageView
+         android:id="@+id/list_item_entry_photo"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_span="3"
+         android:adjustViewBounds="true"
+         android:contentDescription="@string/photo"
+         android:padding="@dimen/timeline_item_padding"
+         />
+   </TableRow>
+   <!-- The audio player and text -->
+   <TableRow
+      android:id="@+id/list_item_entry_audio"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/timeline"
+      android:gravity="center_vertical"
+      android:padding="0dip"
+      android:visibility="gone">
+      
+      <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="@android:color/transparent"
+         />
+      
+      <LinearLayout
+         android:id="@+id/list_item_entry_audio_player"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_span="3"
+         android:orientation="vertical"
+         >
+         
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/Diary_VoiceNote"
+            />
+         <!-- Audio player -->
+         <include layout="@layout/audio_player"/>
+      </LinearLayout>
+   </TableRow>
+   <!-- Padding row -->
+   <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:color/transparent"
+      android:gravity="center_vertical"
+      android:padding="0dip"
+      >
+      
+      <ImageView
+         android:id="@+id/list_item_entry_bottom"
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/timeline_listitembottom_spacing"
+         android:layout_span="4"
+         android:background="@drawable/timeline"
+         />
+   </TableRow>
+</TableLayout>

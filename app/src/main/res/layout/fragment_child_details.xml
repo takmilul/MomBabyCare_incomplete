@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.hackathon.appsoul.mombabycare.fragments.ChildDetailsFragment">
+   
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp">
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/name"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"
+         />
+      
+      
+      <TextView
+         android:id="@+id/detailsNameChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"
+         />
+   
+   </LinearLayout>
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp"
+      >
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/gender"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"
+         />
+      
+      <TextView
+         android:id="@+id/detailsGenderChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"
+         />
+   
+   </LinearLayout>
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp">
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/mother_s_name"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+      
+      <TextView
+         android:id="@+id/detailsMothersNameChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+   </LinearLayout>
+   
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp">
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/dob"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+      
+      <TextView
+         android:id="@+id/detailsDateOfBirthChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+   </LinearLayout>
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp">
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/age"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+      
+      <TextView
+         android:id="@+id/detailsAgeChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+   </LinearLayout>
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp">
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/blood_group"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+      
+      <TextView
+         android:id="@+id/detailsBloodGroupChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+   </LinearLayout>
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp">
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/weight"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+      
+      <TextView
+         android:id="@+id/detailsWeightChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+   </LinearLayout>
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp">
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/height"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+      
+      <TextView
+         android:id="@+id/detailsHeightChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+   </LinearLayout>
+   
+   <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="2dp">
+      
+      <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:text="@string/guardian_s_mobile_no"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+      
+      <TextView
+         android:id="@+id/detailsGurdianMobileNoChildTV"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="50"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="@color/white_70_transparent"/>
+   </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.hackathon.appsoul.mombabycare">
+   
+   <uses-permission android:name="android.permission.INTERNET"/>
+   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+   <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+   
+   <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+      <activity
+         android:name=".MainActivity"
+         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+         <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            
+            <category android:name="android.intent.category.LAUNCHER"/>
+         </intent-filter>
+      </activity>
+      <activity
+         android:name=".WelcomeActivity"
+         android:configChanges="orientation|keyboardHidden|screenSize"
+         android:label="@string/title_activity_welcome"
+         android:theme="@style/FullscreenTheme"/>
+      <activity android:name=".activity.ProfileListForMomActivity"
+         android:label="Mom Profile List"
+         android:parentActivityName=".activity.LoginActivity"
+         android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      <activity
+         android:name=".activity.DashBoardMomActivity"
+         android:label="@string/title_activity_dash_board_mom"
+         android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      <activity android:name=".activity.VaccineListActivity"/>
+      <activity android:name=".activity.ProfileListForHwActivity">
+      </activity>
+      <activity android:name=".activity.CreateProfileActivity">
+      </activity>
+      <activity
+         android:name=".activity.ChatDoctorActivity"
+         android:label="@string/title_activity_chat_doctor"/>
+      <activity
+         android:name=".activity.CreateMotherProfileActivity"
+         android:label="Create Mother Profile"
+         android:parentActivityName=".activity.SignupLoginActivity"
+         android:theme="@style/accent">
+      </activity>
+      <activity 
+         android:name=".activity.CreateChildProfileActivity"
+         android:label="Create Child Profile"
+         android:parentActivityName=".activity.DashBoardMomActivity"
+         android:theme="@style/accent">
+      </activity>
+      <activity
+         android:name=".child.dashboard.DashBoardChildActivity"
+         android:label="@string/title_activity_dash_board_child"
+         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+      </activity>
+      
+      <service
+         android:name=".activity.FTPService"
+         android:exported="false"/>
+      
+      <activity
+         android:name=".activity.SignupLoginActivity"
+         android:label="Category"
+         android:parentActivityName=".activity.LoginActivity"
+         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+      </activity>
+      <activity
+         android:name=".activity.LoginActivity"
+         android:label="Log In"
+         android:parentActivityName=".activity.SignupLoginActivity"
+         android:theme="@style/accent">
+      </activity>
+   </application>
+
+</manifest>

@@ -1,0 +1,21 @@
+<resources>
+   <!-- Default screen margins, per the Android Design guidelines. -->
+   <dimen name="activity_horizontal_margin">16dp</dimen>
+   <dimen name="activity_vertical_margin">16dp</dimen>
+   <!-- Default screen margins, per the Android Design guidelines. -->
+   <dimen name="nav_header_vertical_spacing">16dp</dimen>
+   <dimen name="nav_header_height">160dp</dimen>
+   <dimen name="timeline_item_padding">3dp</dimen>
+   <dimen name="timeline_listitembottom_spacing">12dp</dimen>
+   <dimen name="event_activity_horizontal_margin">16dp</dimen>
+   <dimen name="activity_item_padding">3dp</dimen>
+   <!-- Left or right margin for audio recording Done and Cancel buttons -->
+   <dimen name="audio_recording_button_horizontal_margin">60dp</dimen>
+   <!-- Top margin for the audio and photo icon/text pairs in diary entry -->
+   <dimen name="diary_group_top_margin">20dp</dimen>
+   <!-- Audio player margins -->
+   <dimen name="audio_player_margin">8dp</dimen>
+   
+   <dimen name="font_large_size">16sp</dimen>
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <group android:checkableBehavior="single">
+      <item
+         android:id="@+id/nav_details_child"
+         android:icon="@drawable/ic_menu_camera"
+         android:title="Details"/>
+      <item
+         android:id="@+id/nav_checkup_child"
+         android:icon="@drawable/ic_menu_gallery"
+         android:title="Checkup"/>
+      <item
+         android:id="@+id/nav_vaccine_child"
+         android:icon="@drawable/ic_menu_slideshow"
+         android:title="Vaccine"/>
+      <item
+         android:id="@+id/nav_weight_child"
+         android:icon="@drawable/ic_menu_manage"
+         android:title="Weight"/>
+      <item
+         android:id="@+id/nav_diet_child"
+         android:title="Diet" />
+   </group>
+
+   <item android:title="Communicate">
+      <menu>
+         <item
+            android:id="@+id/nav_phc_child"
+            android:icon="@drawable/ic_menu_share"
+            android:title="PHC"/>
+         <item
+            android:id="@+id/nav_drHelp_child"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Doctor Help"/>
+         <item
+            android:id="@+id/nav_survey_child"
+            android:title="Survey" />
+      </menu>
+   </item>
+
+</menu>

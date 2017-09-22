@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Layout of a single DIARY_ENTRY Event in the timeline list
+The top level tag attribute is required in the Timeline list adapter
+-->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:tag="USER"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:shrinkColumns="0"
+             android:stretchColumns="1"
+             android:paddingRight="32dp"
+             android:background="@drawable/white_rounded_bg_timeline"
+   >
+    <!-- Row with icon, date, and edit and delete buttons -->
+    <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/timeline"
+       android:padding="0dip"
+       android:gravity="center_vertical">
+        
+        <!-- Diary icon on top of timeline -->
+        <ImageView
+           android:id="@+id/list_item_last_timeline"
+           android:src="@drawable/ic_diary"
+           android:contentDescription="@string/icon"
+           style="@style/timeline_bubble_icon_style"
+           />
+        
+        <!-- Date -->
+        <TextView
+           android:id="@+id/list_item_last_date"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           style="@style/timeline_diarydate_style"
+           />
+        <!--  Edit button -->
+        <ImageButton
+           android:id="@+id/list_item_last_edit"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_pencil_selector"
+           android:contentDescription="@string/edit"
+           android:adjustViewBounds="true"
+           style="@style/edit_button_style"
+           />
+        <!-- Delete button -->
+        <ImageButton
+           android:id="@+id/list_item_last_delete"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_delete_selector"
+           android:contentDescription="@string/delete"
+           android:adjustViewBounds="true"
+           android:paddingLeft="12dp"
+           style="@style/edit_button_style"
+           />
+    
+    </TableRow>
+    <!--  The diary notes -->
+    <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/timeline"
+       android:padding="0dip"
+       android:gravity="center_vertical"
+       android:id="@+id/notes_row">
+        <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="0dp"
+           android:background="@android:color/transparent"
+           />
+        <!-- Notes -->
+        <TextView
+           android:id="@+id/list_item_last_notes"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_span="3"
+           style="@style/timeline_diarynotes_style"
+           />
+    </TableRow>
+    <!-- The photo -->
+    <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/timeline"
+       android:padding="0dip"
+       android:gravity="center_vertical">
+        <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@android:color/transparent"
+           />
+        <!-- Photo -->
+        <ImageView
+           android:id="@+id/list_item_last_photo"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_span="3"
+           android:adjustViewBounds="true"
+           android:padding="@dimen/timeline_item_padding"
+           android:contentDescription="@string/photo"
+           />
+    </TableRow>
+    <!-- The audio player and text -->
+    <TableRow
+       android:id="@+id/list_item_last_audio"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/timeline"
+       android:padding="0dip"
+       android:gravity="center_vertical"
+       android:visibility="gone">
+        <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@android:color/transparent"
+           />
+        <LinearLayout
+           android:id="@+id/list_item_last_audio_player"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_span="3"
+           >
+            <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@android:color/transparent"
+               android:text="@string/Diary_VoiceNote"
+               android:layout_marginTop="10dp"
+               />
+            <!-- Audio player -->
+            <include layout="@layout/audio_player"/>
+        </LinearLayout>
+    </TableRow>
+    <!-- Padding row -->
+    <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_vertical"
+       android:background="@android:color/transparent"
+       android:padding="0dip"
+       >
+        <ImageView
+           android:id="@+id/list_item_last_bottom"
+           android:layout_width="match_parent"
+           android:layout_span="4"
+           android:layout_height="@dimen/timeline_listitembottom_spacing"
+           android:background="@drawable/timeline"
+           />
+    </TableRow>
+</TableLayout>
