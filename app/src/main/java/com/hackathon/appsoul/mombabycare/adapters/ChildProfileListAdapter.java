@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.amulyakhare.textdrawable.TextDrawable;
-import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.hackathon.appsoul.mombabycare.R;
 import com.hackathon.appsoul.mombabycare.model.ChildModel;
 import com.hackathon.appsoul.mombabycare.util.AnimationUtil;
+import com.hackathon.appsoul.mombabycare.util.ColorGenerator;
+import com.hackathon.appsoul.mombabycare.util.TextDrawable;
 
 import java.util.ArrayList;
 
